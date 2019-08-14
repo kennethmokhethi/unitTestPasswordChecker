@@ -7,11 +7,6 @@ function passwordCheck(password) {
     var numbers = /[0-9]/g;
     var status=null;
 
-
-
-
-
-
     if (password.length == 8) {
         passLength = true;
 

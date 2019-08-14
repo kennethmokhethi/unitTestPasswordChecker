@@ -22,16 +22,18 @@ function passwordCheck(password) {
 
 
   if((passNul==true)){
-    return status="Error:The password is null";
+     status="Error:The password is null";
   }else if((passNul==false)&& (passLength==false) && (passUpperCase==true) && (passLowerCase==true) && (passNum==true)){
-      return status ="Error:The lengh of the password is not equal to 8 characters";
+       status ="Error:The lengh of the password is not equal to 8 characters";
   }else if((passNul==false)&& (passLength==true) && (passUpperCase==false) && (passLowerCase==true) && (passNum==true)){
-      return status="Error:The password need to contain atleast one uppercase letter";
+       status="Error:The password need to contain atleast one uppercase letter";
   }else if((passNul==false)&& (passLength==true) && (passUpperCase==true) && (passLowerCase==false) && (passNum==true)){
-      return status="Error:The password need to contain atleast one lower case letter";
+       status="Error:The password need to contain atleast one lower case letter";
   }else if((passNul==false)&& (passLength==true) && (passUpperCase==true) && (passLowerCase==true) && (passNum==false)){
-      return status="Error:The password needs to contain atleast one number";
+       status="Error:The password needs to contain atleast one number";
   }
+    
+    return status;
 
 
 }

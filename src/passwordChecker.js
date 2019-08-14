@@ -1,6 +1,10 @@
 ///
 function passwordCheck(password) {
-    var passLength, passUpperCase, passLowerCase, passNum, allConditions = false;
+    var passLength=false;
+    var passUpperCase=false;
+    var passLowerCase=false;
+    var passNu=false;
+    var allConditions = false;
     var passNul = true;
     var upperCaseLetters = /[A-Z]/g;
     var lowerCaseLetters = /[a-z]/g;

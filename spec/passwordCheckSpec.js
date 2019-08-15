@@ -51,11 +51,23 @@ describe("Password checker.Multiply conditions are not met",()=>{
     expect(ansP).toBe("Error:The password needs to have 8 or more characters, atleast a lower case letter and atleast a number")
   });
 
-  fit("Password with characters less than 8 and no lower case",()=>{
+  it("Password with characters less than 8 and no lower case",()=>{
    var password="H2K3";
    var ansP=passwordCheck(password);
    expect(ansP).toBe("Error:The password needs to have 8 or more characters and atleast a lower case letter")
 
+  });
+
+  it("Passwords that has numbers only",()=>{
+   var password="123456789";
+   var ansP=passwordCheck(password);
+   expect(ansP).toBe("Error:The password needs to have atleast a upper and lower case letters")
+  });
+
+  fit("Passwords that has numbers only with characters less than 8",()=>{
+   var password="12345";
+   var ansP=passwordCheck(password);
+   expect(ansP).toBe("Error:The password needs to have 8 or more charecters,atleast a upper and lower case letters")
   });
 
 

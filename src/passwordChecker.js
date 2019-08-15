@@ -53,7 +53,9 @@ function passwordCheck(password) {
   }else if((passNul==false)&& (passLength==false) && (passUpperCase==false) && (passLowerCase==true) && (passNum==false)){
        status="Error:The password needs to have 8 or more characters,atleast one upper case letter and atleast a number";
   }else if((passNul==false)&& (passLength==false) && (passUpperCase==true) && (passLowerCase==false) && (passNum==false)){
-       status="Error:The password needs to have 8 or more characters and atleast a lower case letter";
+       status="Error:The password needs to have 8 or more characters, atleast a lower case letter and atleast a number";
+  }else if((passNul==false)&& (passLength==false) && (passUpperCase==true) && (passLowerCase==false) && (passNum==true)){
+       status="Error:The password needs to have 8 or more characters and atleast a lower case letter"
   }else if((passNul==false)&& (passLength==false) && (passUpperCase==false) && (passLowerCase==false) && (passNum==false)){
        status="Error:The password needs to have atleast a upper and lower case letters"
   }else if((passNul==false)&& (passLength==false) && (passUpperCase==false) && (passLowerCase==true) && (passNum==false)){

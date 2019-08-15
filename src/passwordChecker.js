@@ -1,43 +1,48 @@
 ///
 function passwordCheck(password) {
-    var passLength, passUpperCase, passLowerCase, passNum, allConditions = false;
+    var passLength=false;
+    var passUpperCase=false;
+    var passLowerCase=false;
+    var passNum=false;
+    var allConditions = false;
     var passNul = true;
     var upperCaseLetters = /[A-Z]/g;
     var lowerCaseLetters = /[a-z]/g;
     var numbers = /[0-9]/g;
-    var status=null;
-
-
-
-
-
+    var status;
 
     if (password.length == 8) {
         passLength = true;
-
-    } else if (password != null) {
+     } 
+     if (password != null) {
         passNul = false;
-    } else if (password.match(upperCaseLetters)) {
+    } 
+    if (password.match(upperCaseLetters)) {
         passUpperCase = true;
-    } else if (password.match(lowerCaseLetters)) {
+    } 
+    if (password.match(lowerCaseLetters)) {
         passLowerCase = true;
-    } else if (password.match(numbers)) {
+    } 
+    if (password.match(numbers)) {
         passNum = true;
     }
 
 
   if((passNul==true)){
-    return status="Error:The password is null";
-  }else if((passNul==false)&& (passLength==false) && (passUpperCase==true) && (passLowerCase==true) && (passNum==true)){
-      return status ="Error:The lengh of the password is not equal to 8 characters";
+       status="Error:The password is null";
+  }else if((passNul==false) && (passLength==false) && (passUpperCase==true) && (passLowerCase==true) && (passNum==true)){
+       status ="Error:The lengh of the password is not equal to 8 characters";
   }else if((passNul==false)&& (passLength==true) && (passUpperCase==false) && (passLowerCase==true) && (passNum==true)){
-      return status="Error:The password need to contain atleast one uppercase letter";
+       status="Error:The password need to contain atleast one uppercase letter";
   }else if((passNul==false)&& (passLength==true) && (passUpperCase==true) && (passLowerCase==false) && (passNum==true)){
-      return status="Error:The password need to contain atleast one lower case letter";
+       status="Error:The password need to contain atleast one lower case letter";
   }else if((passNul==false)&& (passLength==true) && (passUpperCase==true) && (passLowerCase==true) && (passNum==false)){
-      return status="Error:The password needs to contain atleast one number";
+       status="Error:The password needs to contain atleast one number";
+  }else{
+       status="All requirements were met";
   }
-
+   
+  return status;
 
 }
 

@@ -25,5 +25,12 @@ describe("Password checker",()=>{
     expect(ansP).toBe("Error:The password need to contain atleast one lower case letter")
   });
 
+  it("Check for numbers",()=>{
+    var password="Hgafsvgt";
+    var ansP=passwordCheck(password);
+    expect(ansP).toBe("Error:The password needs to contain atleast one number")
+
+  });
+
 
 });

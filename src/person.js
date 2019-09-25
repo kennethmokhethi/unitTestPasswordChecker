@@ -1,16 +1,14 @@
 class Person {
+  // constructor of the class
   constructor(name, age, gender, interest) {
     this.name = name;
-    this.age = gender;
+    this.age = age;
+    this.gender = gender;
     this.interest = interest;
   }
-
+  // method that prints the detrails of the person
   hello() {
     let lastInterest = this.interest.pop();
-    return `Hello my name is ${this.name} and I am ${this.age} years old.My interest are ${this.interest} and ${lastInterest}. `;
+    return `Hello my name is ${this.name} and I am ${this.age} years old.My interest are ${this.interest} and ${lastInterest}.`;
   }
 }
-
-let person = new Person("Kenneth", 67, "Male", ["reading", "soccer", "hockey"]);
-let greeting = person.hello();
-console.log(greeting);
